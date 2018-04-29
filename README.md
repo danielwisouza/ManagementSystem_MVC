@@ -3,7 +3,7 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 
 ## Atividade de Requisitos​
 
-Funcionais:​
+### Funcionais:​
 - O administrador terá a opção de cadastrar de usuários e analistas de suporte;​
 - O administrador terá a opção de cadastrar os módulos para suporte;​
 - O usuário poderá abrir um chamado;​
@@ -12,7 +12,7 @@ Funcionais:​
 - O analista de suporte poderá acessar sua fila de chamados, onde terá a opção de filtrar por status;​
 - O sistema irá enviar um e-mail ao usuário que abriu o chamado quando o mesmo tiver seu status alterado;​
 
-Não-funcionais:​
+### Não-funcionais:​
 
 - Separação de Interesses (Separation of Concerns - SoC): separar corretamente lógica, interação com o usuário e comportamentos na aplicação.​
 - Utilizar a Arquitetura de Software  MVC (Model-View-Controller)​
