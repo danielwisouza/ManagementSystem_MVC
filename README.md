@@ -1,5 +1,5 @@
 # O PROJETO
-Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído de
+Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído de colocar em pratica todo contudo aprendido na disciplina Engenharia de Software.
 
 ## Atividade de Requisitos​
 
