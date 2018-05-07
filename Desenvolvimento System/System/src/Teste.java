@@ -1,4 +1,14 @@
+import static org.junit.jupiter.api.Assertions.*;
 
-public class Teste {
+import org.junit.jupiter.api.Test;
+
+class Teste {
+
+	@Test
+	void test() {
+		
+		assertEquals(1, 1);
+		
+	}
 
 }
