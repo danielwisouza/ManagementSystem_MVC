@@ -2,6 +2,13 @@ public class Modulo {
 	private int idModulo;
 	private String nomeModulo;
 	
+	
+	
+	public Modulo(int idModulo, String nomeModulo) {
+
+		this.idModulo = idModulo;
+		this.nomeModulo = nomeModulo;
+	}
 	public int getIdModulo() {
 		return idModulo;
 	}

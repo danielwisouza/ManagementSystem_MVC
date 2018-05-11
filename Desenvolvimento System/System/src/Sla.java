@@ -4,6 +4,15 @@ public class Sla {
 	private int idSla;
 	private LocalDate duracao;	
 	
+	
+	
+	public Sla(int idSla, LocalDate duracao) {
+
+		this.idSla = idSla;
+		this.duracao = duracao;
+	}
+
+
 	public int getIdSla() {
 		return idSla;
 	}

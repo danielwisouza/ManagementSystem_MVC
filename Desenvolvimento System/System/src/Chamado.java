@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Chamado {
@@ -15,6 +16,26 @@ public class Chamado {
 	private Sla sla;
 	private Prioridade prioridade;
 	
+	
+	
+	
+	public Chamado(int numeroChamado, String usuarioAbertura, String usuarioResponsavel, LocalDate dataAbertura,
+			LocalDate dataFechamento, String assunto, String descricao, String status, Modulo modulo, Sla sla, Prioridade prioridade) {
+		
+		this.numeroChamado = numeroChamado;
+		this.usuarioAbertura = usuarioAbertura;
+		this.usuarioResponsavel = usuarioResponsavel;
+		this.dataAbertura = dataAbertura;
+		this.dataFechamento = dataFechamento;
+		this.assunto = assunto;
+		this.descricao = descricao;
+		this.status = status;
+		this.comentarios = new LinkedList<Comentario>();
+		this.modulo = modulo;
+		this.sla = sla;
+		this.prioridade = prioridade;
+	}
+
 	public void addComentario(Comentario comentario) {
 		
 	}

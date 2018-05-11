@@ -3,9 +3,11 @@ import java.util.*;
 public class Modelo {
 	private Administrador administrador;
 	private List<Usuario> usuarios;
-	private List<Chamado> chamados;
+	private List<Chamado> chamados = new LinkedList<Chamado>();
 	private List<Sla> slas;
 	private List<Prioridade> prioridades;
+	
+	
 	public Administrador getAdministrador() {
 		return administrador;
 	}
@@ -61,9 +63,7 @@ public class Modelo {
 		return usuario;
 	}
 	
-	public void addUsuario(Usuario usuario) {
-		
-	}
+
 	
 	public void alterarUsuario(Usuario usuario) {
 		
@@ -75,29 +75,29 @@ public class Modelo {
 	}
 	
 	public void addChamado(Chamado chamado) {
-		
+		chamados.add(chamado);
 	}
 	
-	public void alterarChamado(Chamado chamado) {
-		
+	public void alterarDescricaoChamado(int numero, String descricao) {
+		for(Chamado chamado:chamados){
+			if(chamado.getNumeroChamado()== numero){
+				chamado.setDescricao(descricao);
+			}
+		}
 	}
 	
 	public void alterarResponsavel(String usuarioResponsavel) {
 		
 	}
 	
-	public Chamado buscarChamado(int numeroChamado) {
-		Chamado chamado = new Chamado();
-		return chamado;
-	}
-	
-	public List<Chamado> buscarChamadoResponsavel(String usuarioResponsavel) {
-		List<Chamado> chamados = (List<Chamado>) new Chamado();
-		return chamados;
-	}
+
 	
 	public void enviarEmail(Usuario usuario, Chamado chamado) {
 		
+	}
+	
+	public void addUsuario(Usuario usu){
+		usuarios.add(usu);
 	}
 }
 
