@@ -6,6 +6,7 @@ public class Modelo {
 	private List<Chamado> chamados = new LinkedList<Chamado>();
 	private List<Sla> slas;
 	private List<Prioridade> prioridades;
+	private List<Modulo> modulos;
 	
 	
 	public Administrador getAdministrador() {
@@ -56,7 +57,7 @@ public class Modelo {
 		this.modulos = modulos;
 	}
 
-	private List<Modulo> modulos;
+	
 	
 	public Usuario login(String username, String password) {
 		Usuario usuario = new Usuario();
@@ -77,7 +78,7 @@ public class Modelo {
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
 	}
-	
+	//alterar descrição do chamado
 	public void alterarDescricaoChamado(int numero, String descricao) {
 		for(Chamado chamado:chamados){
 			if(chamado.getNumeroChamado()== numero){
@@ -85,12 +86,14 @@ public class Modelo {
 			}
 		}
 	}
-	
-	public void alterarResponsavel(String usuarioResponsavel) {
-		
+	//alterar o responsável do chamado
+	public void alterarResponsavel(int numero, String usuarioResponsavel) {
+		for(Chamado chamado:chamados){
+			if(chamado.getNumeroChamado()== numero){
+				chamado.setUsuarioResponsavel(usuarioResponsavel);
+			}
+		}		
 	}
-	
-
 	
 	public void enviarEmail(Usuario usuario, Chamado chamado) {
 		

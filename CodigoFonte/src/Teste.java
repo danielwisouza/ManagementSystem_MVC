@@ -10,7 +10,6 @@ public class Teste {
 	@Test
 	public void test() {
 		
-		
 		Modelo modelo = new Modelo();
 		
 
@@ -24,8 +23,16 @@ public class Teste {
 		
 		modelo.alterarDescricaoChamado(1, "problema muito grande");
 		
-		
 		assertEquals(modelo.getChamados().get(0).getDescricao(), "problema muito grande");
+		
+		assertEquals(modelo.getChamados().get(0).getUsuarioResponsavel(), "maria@gmail.com");
+		
+		modelo.alterarResponsavel(1, "jose@gmail.com");
+		
+		assertEquals(modelo.getChamados().get(0).getUsuarioResponsavel(), "jose@gmail.com");
+		
+		
+		
 	}
 
 }
