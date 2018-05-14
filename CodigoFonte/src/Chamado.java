@@ -43,11 +43,10 @@ public class Chamado {
 	
 	public void alterarComentario(int numero, String descricao) {
 		for(Comentario comentario:comentarios){
-			if(chamado.getNumeroChamado()== numero){
-				chamado.setDescricao(descricao);
+			//if(chamado.getNumeroChamado()== numero){
+				//chamado.setDescricao(descricao);
 			}
 		}
-	}
 	
 	
 	public void addModulo(Modulo modulo) {
