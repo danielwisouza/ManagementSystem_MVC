@@ -36,13 +36,19 @@ public class Chamado {
 		this.prioridade = prioridade;
 	}
 
+//Trabalhando Com Comentario 
 	public void addComentario(Comentario comentario) {
-		
+		comentarios.add(comentario);
 	}
 	
-	public void alterarComentario(Comentario comentario) {
-		
+	public void alterarComentario(int numero, String descricao) {
+		for(Comentario comentario:comentarios){
+			if(chamado.getNumeroChamado()== numero){
+				chamado.setDescricao(descricao);
+			}
+		}
 	}
+	
 	
 	public void addModulo(Modulo modulo) {
 		
