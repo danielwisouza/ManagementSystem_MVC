@@ -2,11 +2,7 @@ public class Prioridade {
 	private int idPrioridade;
 	private String criticidade;
 	
-	
-	
-	
 	public Prioridade(int idPrioridade, String criticidade) {
-
 		this.idPrioridade = idPrioridade;
 		this.criticidade = criticidade;
 	}

@@ -8,7 +8,18 @@ public class Modelo {
 	private List<Prioridade> prioridades;
 	private List<Modulo> modulos;
 	
-	
+// Construtor 
+public Modelo(Administrador administrador, List<Usuario> usuarios, List<Chamado> chamados, List<Sla> slas,
+			List<Prioridade> prioridades, List<Modulo> modulos) {
+		this.administrador = administrador;
+		this.usuarios = usuarios;
+		this.chamados = chamados;
+		this.slas = slas;
+		this.prioridades = prioridades;
+		this.modulos = modulos;
+	}
+
+// Gets e sets
 	public Administrador getAdministrador() {
 		return administrador;
 	}

@@ -5,6 +5,15 @@ public class Usuario {
 	private String password;
 	private String tipoUsuario;
 	
+	
+public Usuario(String nome, String email, String username, String password, String tipoUsuario) {
+	this.nome = nome;
+	this.email = email;
+	this.username = username;
+	this.password = password;
+	this.tipoUsuario = tipoUsuario;
+	}
+
 	public String getNome() {
 		return nome;
 	}

@@ -5,7 +5,6 @@ public class Modulo {
 	
 	
 	public Modulo(int idModulo, String nomeModulo) {
-
 		this.idModulo = idModulo;
 		this.nomeModulo = nomeModulo;
 	}

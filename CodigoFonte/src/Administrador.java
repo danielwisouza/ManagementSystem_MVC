@@ -3,6 +3,13 @@ public class Administrador {
 	private String username;
 	private String password;
 	
+// Construtor	
+public Administrador(String username, String password) {
+	this.username = username;
+	this.password = password;
+}
+	
+// Gets e sets
 	public String getUsername() {
 		return username;
 	}
