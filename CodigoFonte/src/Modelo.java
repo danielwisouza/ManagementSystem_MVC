@@ -7,17 +7,6 @@ public class Modelo {
 	private List<Sla> slas;
 	private List<Prioridade> prioridades;
 	private List<Modulo> modulos;
-	
-// Construtor 
-public Modelo(Administrador administrador, List<Usuario> usuarios, List<Chamado> chamados, List<Sla> slas,
-			List<Prioridade> prioridades, List<Modulo> modulos) {
-		this.administrador = administrador;
-		this.usuarios = usuarios;
-		this.chamados = chamados;
-		this.slas = slas;
-		this.prioridades = prioridades;
-		this.modulos = modulos;
-	}
 
 // Gets e sets
 	public Administrador getAdministrador() {
@@ -70,10 +59,10 @@ public Modelo(Administrador administrador, List<Usuario> usuarios, List<Chamado>
 
 	
 	
-	public Usuario login(String username, String password) {
-		Usuario usuario = new Usuario();
-		return usuario;
-	}
+//	public Usuario login(String username, String password) {
+//		Usuario usuario = new Usuario();
+//		return usuario;
+//	}
 	
 
 	
@@ -81,10 +70,10 @@ public Modelo(Administrador administrador, List<Usuario> usuarios, List<Chamado>
 		
 	}
 	
-	public List<Usuario> buscarUsuarios(String nome) {
-		List<Usuario> usuarios = (List<Usuario>) new Usuario();
-		return usuarios;
-	}
+//	public List<Usuario> buscarUsuarios(String nome) {
+//		List<Usuario> usuarios = (List<Usuario>) new Usuario();
+//		return usuarios;
+//	}
 	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
