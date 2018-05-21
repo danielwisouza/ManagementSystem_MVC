@@ -3,7 +3,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Chamado {
-	private int numeroChamado;
 	private String usuarioAbertura;
 	private String usuarioResponsavel;
 	private LocalDate dataAbertura;
@@ -11,7 +10,7 @@ public class Chamado {
 	private String assunto;
 	private String descricao;
 	private String status;
-	private List<Comentario> comentarios;
+	private List<Comentario> comentarios = new LinkedList<Comentario>();
 	private Modulo modulo;
 	private Sla sla;
 	private Prioridade prioridade;
@@ -22,7 +21,6 @@ public class Chamado {
 	public Chamado(int numeroChamado, String usuarioAbertura, String usuarioResponsavel, LocalDate dataAbertura,
 			LocalDate dataFechamento, String assunto, String descricao, String status, Modulo modulo, Sla sla, Prioridade prioridade) {
 		
-		this.numeroChamado = numeroChamado;
 		this.usuarioAbertura = usuarioAbertura;
 		this.usuarioResponsavel = usuarioResponsavel;
 		this.dataAbertura = dataAbertura;
@@ -30,23 +28,22 @@ public class Chamado {
 		this.assunto = assunto;
 		this.descricao = descricao;
 		this.status = status;
-		this.comentarios = new LinkedList<Comentario>();
 		this.modulo = modulo;
 		this.sla = sla;
 		this.prioridade = prioridade;
 	}
 
+    public void addComentario(Comentario comentario) {
+    	comentarios.add(comentario);
+    }
 //Trabalhando Com Comentario 
-	public void addComentario(Comentario comentario) {
-		comentarios.add(comentario);
-	}
-	
-	public void alterarComentario(int numero, String descricao) {
-		for(Comentario comentario:comentarios){
-			//if(chamado.getNumeroChamado()== numero){
-				//chamado.setDescricao(descricao);
+	public void alterarComentario(int numeroChamado, String comentario) {
+		for(Comentario chamado:comentarios){
+			if(((Chamado) comentarios).getNumeroChamado()== numeroChamado){
+				chamado. setcomentario(comentario);
 			}
 		}
+	}
 	
 	
 	public void addModulo(Modulo modulo) {
@@ -126,6 +123,7 @@ public class Chamado {
 	}
 
 	public List<Comentario> getComentarios() {
+		
 		return comentarios;
 	}
 
@@ -156,5 +154,6 @@ public class Chamado {
 	public void setPrioridade(Prioridade prioridade) {
 		this.prioridade = prioridade;
 	}
+
 	
 }
