@@ -39,7 +39,9 @@ public class Teste {
 		
 		assertEquals(listaUsuario.get(0).getEmail(), "email");
 		
+		Usuario usuNovo = modelo.alterarUsuario(new Usuario("arieneNovo", "emailNovo", "username", "passwordNovo", "tipoUsuario"));
 		
+		assertEquals(usuNovo.getNome(), "arieneNovo");
 	}
 
 }

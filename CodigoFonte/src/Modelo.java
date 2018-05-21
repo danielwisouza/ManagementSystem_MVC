@@ -67,8 +67,23 @@ public class Modelo {
 	
 
 	
-	public void alterarUsuario(Usuario usuario) {
+	public Usuario alterarUsuario(Usuario usuario) {
+		Usuario usuarioAlterado = usuario;
+		for(Usuario usuarioBusca:usuarios){
+			//Altera os dados do usuario de acordo com o username
+			if(usuarioBusca.getUsername().equals(usuario.getUsername())){
+				usuarioBusca.setNome(usuario.getNome());
+				usuarioBusca.setEmail(usuario.getEmail());
+				usuarioBusca.setUsername(usuario.getUsername());
+				usuarioBusca.setPassword(usuario.getPassword());
+				usuarioBusca.setTipoUsuario(usuario.getTipoUsuario());
+				
+				usuarioAlterado = usuarioBusca;
+				return usuarioAlterado;
+			}
+		}
 		
+		return usuario;
 	}
 	
 	public List<Usuario> buscarUsuarios(String nome) {
