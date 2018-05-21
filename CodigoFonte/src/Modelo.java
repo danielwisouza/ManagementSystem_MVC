@@ -1,12 +1,13 @@
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Modelo {
 	private Administrador administrador;
-	private List<Usuario> usuarios;
+	private List<Usuario> usuarios = new LinkedList<Usuario>();
 	private List<Chamado> chamados = new LinkedList<Chamado>();
-	private List<Sla> slas;
-	private List<Prioridade> prioridades;
-	private List<Modulo> modulos;
+	private List<Sla> slas = new LinkedList<Sla>();
+	private List<Prioridade> prioridades = new LinkedList<Prioridade>();
+	private List<Modulo> modulos = new LinkedList<Modulo>();
 
 // Gets e sets
 	public Administrador getAdministrador() {
@@ -70,10 +71,17 @@ public class Modelo {
 		
 	}
 	
-//	public List<Usuario> buscarUsuarios(String nome) {
-//		List<Usuario> usuarios = (List<Usuario>) new Usuario();
-//		return usuarios;
-//	}
+	public List<Usuario> buscarUsuarios(String nome) {
+		List<Usuario> usuariosRetorno = new LinkedList<Usuario>();
+		//return usuarios;
+		for(Usuario usuario:usuarios){
+			if(usuario.getNome().equals(nome)){
+				usuariosRetorno.add(usuario);
+			}
+		}
+		
+		return usuariosRetorno;
+	}
 	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);

@@ -1,4 +1,6 @@
 import static org.junit.Assert.*;
+import java.util.LinkedList;
+import java.util.List;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -31,6 +33,11 @@ public class Teste {
 		
 		assertEquals(modelo.getChamados().get(0).getUsuarioResponsavel(), "jose@gmail.com");
 		
+		modelo.addUsuario(new Usuario("ariene", "email", "username", "password", "tipoUsuario"));
+		
+		List<Usuario> listaUsuario = modelo.buscarUsuarios("ariene");
+		
+		assertEquals(listaUsuario.get(0).getEmail(), "email");
 		
 		
 	}
