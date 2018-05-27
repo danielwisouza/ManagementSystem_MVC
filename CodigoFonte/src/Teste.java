@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import java.security.GeneralSecurityException;
 import java.time.LocalDate;
 import java.time.Month;
 
@@ -32,11 +33,9 @@ public class Teste {
 
 		
 		Chamado chamado = new Chamado(2, "joao@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"));
-		//assertEquals(chamado.getComentarios().get(0),"problema");
-		//Chamado chamado = new Chamado(0, null, null, null, null, null, null, null, null, null, null);
-	
-		
-		
+		//chamado.addComentario(new Comentario("kkk",1,1));
+		assertEquals(chamado.getComentarios().size(),0);
+		//chamado.addComentario(new Comentario("kkk",getChamado(1),getUsuarioChamado(1)));
 		
 		
 	}
