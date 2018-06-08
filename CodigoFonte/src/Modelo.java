@@ -92,7 +92,7 @@ public class Modelo {
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
 	}
-	//alterar descri��o do chamado
+	//alterar descricao do chamado
 	public void alterarDescricaoChamado(int numero, String descricao) {
 		for(Chamado chamado:chamados){
 			if(chamado.getNumeroChamado()== numero){
@@ -100,7 +100,7 @@ public class Modelo {
 			}
 		}
 	}
-	//alterar o respons�vel do chamado
+	//alterar o responsavel do chamado
 	public void alterarResponsavel(int numero, String usuarioResponsavel) {
 		for(Chamado chamado:chamados){
 			if(chamado.getNumeroChamado()== numero){
@@ -116,5 +116,17 @@ public class Modelo {
 	public void addUsuario(Usuario usu){
 		usuarios.add(usu);
 	}
+	
+    public void addSla(Sla sla) {
+    	slas.add(sla);
+    }
+    
+    public void addPrioridade(Prioridade prioridade) {
+    	prioridades.add(prioridade);
+    }
+    
+    public void addModulo(Modulo modulo) {
+    	modulos.add(modulo);
+    }
 }
 

@@ -49,6 +49,15 @@ public class Chamado {
 		}
 	}
     
+    public int buscarComentarioUsuario(int i) {
+		for(Comentario com:comentarios) {
+			if(com.getNumeroChamado()== i) {
+			}
+		}
+		return i;
+
+	}
+    
 	public void setNumeroChamado(int numero) {
 		
 	}
