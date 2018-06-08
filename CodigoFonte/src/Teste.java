@@ -44,16 +44,17 @@ public class Teste {
 		assertEquals(usuNovo.getNome(), "arieneNovo");
 
 		Chamado chamado = new Chamado(2, "joao@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"));
+		
 		//Adicionando Comentario em chamado
-
 		chamado.addComentario(new Comentario("O que � isso", new Usuario("Daniel", "daniel2wis@gmail.com", "Willians ", "12345", "Administrador"), new Chamado(3, "joao@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"))));
 		
 		assertEquals(chamado.getComentarios().size(),1);
 		//Buscando Comentário por nome
-		assertEquals(chamado.getComentarios().get(0).getcomentario(), "O que � isso");
+		assertEquals(chamado.getComentarios().get(0).getcomentario(), "O que e isso");
 		
 		//Alterando comentario
-		chamado.alterarComentario(1, "O1");
+		chamado.alterarComentario("dfdfd",1);
+	
 	}
 
 }

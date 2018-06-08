@@ -37,30 +37,18 @@ public class Chamado {
     	comentarios.add(comentario);
     }
 	
-    public void alterarComentario(int numero, String comentario) {
-		for(Chamado chamado:comentarios) {
-			if(chamado.getNumeroChamado()== numero) {
-				chamado.setComentarios(comentarios);
-			}
-		}
-	}
-	
-	public void addModulo(Modulo modulo) {
-		
-	}
-	
-	public void addPrioridade(Prioridade prioridade) {
-		
-	}
-	
-	public void addSla(Sla sla) {
-		
-	}
-	
 	public int getNumeroChamado() { //Serializa o numero do chamado
 		return 1;
 	}
 	
+    public void alterarComentario(String comentario, int i) {
+		for(Comentario com:comentarios) {
+			if(com.getNumeroChamado()== i) {
+				com.setcomentario(comentario);
+			}
+		}
+	}
+    
 	public void setNumeroChamado(int numero) {
 		
 	}

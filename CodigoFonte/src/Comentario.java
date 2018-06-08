@@ -31,4 +31,9 @@ public Comentario(String comentario, Usuario usuario, Chamado numeroChamado) {
 	public void setchamado(Chamado numeroChamado) {
 		this.numeroChamado = numeroChamado;
 	}	
+	
+	public int getNumeroChamado() { //Serializa o numero do chamado
+		return 1;
+	}
+	
 }
