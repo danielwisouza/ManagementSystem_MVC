@@ -39,6 +39,11 @@ public class Teste {
 		
 		assertEquals(listaUsuario.get(0).getEmail(), "email");
 		
+		modelo.addSla(new Sla(1, LocalDate.of(2018, Month.MAY, 11)));
+		modelo.addModulo(new Modulo(1, "Compras"));
+		modelo.addPrioridade(new Prioridade(1, "Total"));
+	
+		
 		Usuario usuNovo = modelo.alterarUsuario(new Usuario("arieneNovo", "emailNovo", "username", "passwordNovo", "tipoUsuario"));
 		
 		assertEquals(usuNovo.getNome(), "arieneNovo");
@@ -59,6 +64,8 @@ public class Teste {
 		
 		//Buscando Comentario por numero
 		chamado.buscarComentarioUsuario(1);
+		
+		
 	
 	}
 
