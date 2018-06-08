@@ -1,12 +1,13 @@
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Modelo {
 	private Administrador administrador;
-	private List<Usuario> usuarios;
+	private List<Usuario> usuarios = new LinkedList<Usuario>();
 	private List<Chamado> chamados = new LinkedList<Chamado>();
-	private List<Sla> slas;
-	private List<Prioridade> prioridades;
-	private List<Modulo> modulos;
+	private List<Sla> slas = new LinkedList<Sla>();
+	private List<Prioridade> prioridades = new LinkedList<Prioridade>();
+	private List<Modulo> modulos = new LinkedList<Modulo>();
 
 // Gets e sets
 	public Administrador getAdministrador() {
@@ -56,24 +57,37 @@ public class Modelo {
 	public void setModulos(List<Modulo> modulos) {
 		this.modulos = modulos;
 	}
-
 	
-	
-//	public Usuario login(String username, String password) {
-//		Usuario usuario = new Usuario();
-//		return usuario;
-//	}
-	
-
-	
-	public void alterarUsuario(Usuario usuario) {
+	public Usuario alterarUsuario(Usuario usuario) {
+		Usuario usuarioAlterado = usuario;
+		for(Usuario usuarioBusca:usuarios){
+			//Altera os dados do usuario de acordo com o username
+			if(usuarioBusca.getUsername().equals(usuario.getUsername())){
+				usuarioBusca.setNome(usuario.getNome());
+				usuarioBusca.setEmail(usuario.getEmail());
+				usuarioBusca.setUsername(usuario.getUsername());
+				usuarioBusca.setPassword(usuario.getPassword());
+				usuarioBusca.setTipoUsuario(usuario.getTipoUsuario());
+				
+				usuarioAlterado = usuarioBusca;
+				return usuarioAlterado;
+			}
+		}
 		
+		return usuario;
 	}
 	
-//	public List<Usuario> buscarUsuarios(String nome) {
-//		List<Usuario> usuarios = (List<Usuario>) new Usuario();
-//		return usuarios;
-//	}
+	public List<Usuario> buscarUsuarios(String nome) {
+		List<Usuario> usuariosRetorno = new LinkedList<Usuario>();
+		//return usuarios;
+		for(Usuario usuario:usuarios){
+			if(usuario.getNome().equals(nome)){
+				usuariosRetorno.add(usuario);
+			}
+		}
+		
+		return usuariosRetorno;
+	}
 	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
