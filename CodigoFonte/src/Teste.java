@@ -39,7 +39,7 @@ public class Teste {
 		//Buscando Comentário por nome
 		assertEquals(chamado.getComentarios().get(0).getcomentario(), "O que é isso");
 		//Alterando comentario
-		chamado.alterarComentario(, "O1");
+		chamado.alterarComentario(1, "O1");
 		
 		
 	}

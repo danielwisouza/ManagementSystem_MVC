@@ -37,15 +37,13 @@ public class Chamado {
     	comentarios.add(comentario);
     }
 	
-	public void alterarComentario(int numeroChamado, String comentario) {
-		for(Comentario chamado:comentarios){
-			if(chamado.getnumeroChamado()== numeroChamado){
+    public void alterarComentario(int numero, String comentario) {
+		for(Chamado chamado:comentarios) {
+			if(chamado.getNumeroChamado()== numero) {
 				chamado.setComentarios(comentarios);
 			}
 		}
 	}
-	
-	
 	
 	public void addModulo(Modulo modulo) {
 		

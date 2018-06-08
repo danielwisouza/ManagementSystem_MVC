@@ -57,23 +57,9 @@ public class Modelo {
 		this.modulos = modulos;
 	}
 
-	
-	
-//	public Usuario login(String username, String password) {
-//		Usuario usuario = new Usuario();
-//		return usuario;
-//	}
-	
-
-	
 	public void alterarUsuario(Usuario usuario) {
 		
 	}
-	
-//	public List<Usuario> buscarUsuarios(String nome) {
-//		List<Usuario> usuarios = (List<Usuario>) new Usuario();
-//		return usuarios;
-//	}
 	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
