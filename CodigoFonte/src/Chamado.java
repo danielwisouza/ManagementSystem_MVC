@@ -33,30 +33,7 @@ public class Chamado {
 		this.prioridade = prioridade;
 	}
 
-    public void addComentario(Comentario comentario) {
-    	comentarios.add(comentario);
-    }
-	
-	public int getNumeroChamado() { //Serializa o numero do chamado
-		return 1;
-	}
-	
-    public void alterarComentario(String comentario, int i) {
-		for(Comentario com:comentarios) {
-			if(com.getNumeroChamado()== i) {
-				com.setcomentario(comentario);
-			}
-		}
-	}
     
-    public int buscarComentarioUsuario(int i) {
-		for(Comentario com:comentarios) {
-			if(com.getNumeroChamado()== i) {
-			}
-		}
-		return i;
-
-	}
     
 	public void setNumeroChamado(int numero) {
 		
@@ -150,6 +127,29 @@ public class Chamado {
 	public void setPrioridade(Prioridade prioridade) {
 		this.prioridade = prioridade;
 	}
+	public void addComentario(Comentario comentario) {
+    	comentarios.add(comentario);
+    }
+	
+	public int getNumeroChamado() { //Serializa o numero do chamado
+		return 1;
+	}
+	
+    public void alterarComentario(String comentario, int i) {
+		for(Comentario com:comentarios) {
+			if(com.getNumeroChamado()== i) {
+				com.setcomentario(comentario);
+			}
+		}
+	}
+    
+    public int buscarComentarioUsuario(int i) {
+		for(Comentario com:comentarios) {
+			if(com.getNumeroChamado()== i) {
+			}
+		}
+		return i;
 
+	}
 	
 }
