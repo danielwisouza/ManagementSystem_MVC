@@ -24,31 +24,31 @@ public class Teste {
 		//Um chamado encontrado
 		assertEquals(modelo.getChamados().size(), 1);
 		
-		//Buscando chamado por Descrição
+		//Buscando chamado por Descriï¿½ï¿½o
 		assertEquals(modelo.getChamados().get(0).getDescricao(), "problema");
 		
-		//Alterando descrição do Chamado
+		//Alterando descriï¿½ï¿½o do Chamado
 		modelo.alterarDescricaoChamado(1, "problema muito grande");
 		
-		//Verificando alteração da descrição do chamado 
+		//Verificando alteraï¿½ï¿½o da descriï¿½ï¿½o do chamado 
 		assertEquals(modelo.getChamados().get(0).getDescricao(), "problema muito grande");
 		
-		//Buscando Responsável pelo chamado
+		//Buscando Responsï¿½vel pelo chamado
 		assertEquals(modelo.getChamados().get(0).getUsuarioResponsavel(), "maria@gmail.com");
 		
-		//Alterando responsável do chamado
+		//Alterando responsï¿½vel do chamado
 		modelo.alterarResponsavel(1, "jose@gmail.com");
 		
-		//Verificando alteração do responsável pelo chamado 
+		//Verificando alteraï¿½ï¿½o do responsï¿½vel pelo chamado 
 		assertEquals(modelo.getChamados().get(0).getUsuarioResponsavel(), "jose@gmail.com");
 
-		// Cadastrando Usuário no Sistema
+		// Cadastrando Usuï¿½rio no Sistema
 		modelo.addUsuario(new Usuario("ariene", "email", "username", "password", "tipoUsuario"));
 		
-		//Buscando usuário por nome
+		//Buscando usuï¿½rio por nome
 		List<Usuario> listaUsuario = modelo.buscarUsuarios("ariene");
 		
-		//Buscando usuário por E-mail
+		//Buscando usuï¿½rio por E-mail
 		assertEquals(listaUsuario.get(0).getEmail(), "email");
 		
 		// Cadastrando Sla, Modulo e Prioridade
@@ -56,10 +56,10 @@ public class Teste {
 		modelo.addModulo(new Modulo(1, "Compras"));
 		modelo.addPrioridade(new Prioridade(1, "Total"));
 	
-		// Alterando Usuário cadastrado
+		// Alterando Usuï¿½rio cadastrado
 		Usuario usuNovo = modelo.alterarUsuario(new Usuario("arieneNovo", "emailNovo", "username", "passwordNovo", "tipoUsuario"));
 		
-		// Verificando alteração do Usuário
+		// Verificando alteraï¿½ï¿½o do Usuï¿½rio
 		assertEquals(usuNovo.getNome(), "arieneNovo");
 
 		// Cadatrando comentario Chamado

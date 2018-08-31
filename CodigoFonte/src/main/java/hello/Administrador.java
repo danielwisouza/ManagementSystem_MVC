@@ -1,3 +1,4 @@
+package hello;
 
 public class Administrador {
 	private String username;
@@ -24,4 +25,3 @@ public Administrador(String username, String password) {
 	}
 	
 }
-
