@@ -24,11 +24,10 @@ public class MainServer {
 
 		inicializarCarros();
 
-		Controller controller = new Controller(model);
+		Controller controller = new Controller(modelo);
 		
-		controller.buscarCarro();
-		controller.buscarCarroPlaca();
-		controller.buscarCarroModelo();
+		controller.buscarChamado();
+
 		
     }
     
