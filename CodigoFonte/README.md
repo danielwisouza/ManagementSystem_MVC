@@ -1,9 +1,3 @@
-spark-heroku
-============
+#Projeto - MVC 
 
-Spark Heroku skeleton
-
-To deploy your app
-
-	heroku apps:create [your_app_name]
-	git push heroku master
+## Gerenciamento de Chamados de Help Desks
