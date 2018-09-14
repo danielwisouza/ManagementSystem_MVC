@@ -1,5 +1,11 @@
 package hello;
 
+import static spark.Spark.get;
+
+import java.util.List;
+
+import com.google.gson.Gson;
+
 public class Controller {
 	
 	private Modelo modelo;
@@ -7,12 +13,37 @@ public class Controller {
 	
 	public Controller(Modelo modelo){
 		this.modelo = modelo;
-//	}
-//
-//	public void buscarChamado(){
-//		get("/chamado/:numeroChamado", (req, res) -> {
-//			Chamado chamadosEncontrado = modelo.buscarChamado(req.params(":numeroChamado"));
-//			return new Gson().toJson(chamadosEncontrado);
-		};
 	}
+	
+//	public void buscarCarro(){
+//		get("/carro/:modelo/:marca/:cor", (req, res) -> {
+//		
+//			Especificacao espec = new Especificacao(req.params(":modelo"), req.params(":marca"), req.params(":cor"));	
+//			List<Carro> carrosEncontrados = model.buscarEspecificacao(espec);	
+//			return new Gson().toJson(carrosEncontrados);
+//			
+//		});
+//	}
+//	
+	
+//	public void buscarCarroPlaca(){
+//		get("/carro/:placa", (req, res) -> {
+//		
+//			
+//			Carro carrosEncontrado = model.buscarPlaca(req.params(":placa"));	
+//			return new Gson().toJson(carrosEncontrado);
+//			
+//		});
+//	}
+//	
+	public void buscarUsuarios(){
+		get("/chamado/:usuario", (req, res) -> {
+			List<Usuario> usuariosEncontrado = modelo.buscarUsuarios(req.params(":usuario"));	
+			return new Gson().toJson(usuariosEncontrado);
+			
+		});
+	}
+	
+	
 
+}
