@@ -92,7 +92,8 @@ public class Modelo {
 	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
-	}
+	}	
+	
 	//alterar descricao do chamado
 	public void alterarDescricaoChamado(int numero, String descricao) {
 		for(Chamado chamado:chamados){
