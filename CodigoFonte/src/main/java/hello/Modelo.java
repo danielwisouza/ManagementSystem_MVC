@@ -110,7 +110,6 @@ public class Modelo {
 		}		
 	}
 	
-	
 	public void enviarEmail(Usuario usuario, Chamado chamado) {
 		
 	}
@@ -131,11 +130,4 @@ public class Modelo {
     	modulos.add(modulo);
     }
     
-
-	public Chamado buscarChamado(int i){
-		for(Chamado cha:chamados){
-			if (cha.getNumeroChamado().equals(i)) return i;
-		}
-		return null;
-	}
 }

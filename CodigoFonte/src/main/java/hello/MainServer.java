@@ -27,9 +27,9 @@ public class MainServer {
 
 		inicializarCarros();
 
-		Controller controller = new Controller(modelo);
+		//Controller controller = new Controller(modelo);
 		
-		controller.buscarChamado();
+//		controller.buscarChamado();
 
 		
     }
