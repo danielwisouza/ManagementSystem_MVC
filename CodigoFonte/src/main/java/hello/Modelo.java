@@ -68,7 +68,7 @@ public class Modelo {
 				usuarioBusca.setEmail(usuario.getEmail());
 				usuarioBusca.setUsername(usuario.getUsername());
 				usuarioBusca.setPassword(usuario.getPassword());
- 			 usuarioBusca.setTipoUsuario(usuario.getTipoUsuario());
+				usuarioBusca.setTipoUsuario(usuario.getTipoUsuario());
 				
 				usuarioAlterado = usuarioBusca;
 				return usuarioAlterado;
