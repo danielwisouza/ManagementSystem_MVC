@@ -78,11 +78,11 @@ public class Modelo {
 		return usuario;
 	}
 	
-	public List<Usuario> buscarUsuarios(String nome) {
+	public List<Usuario> buscarUsuarios(String email) {
 		List<Usuario> usuariosRetorno = new LinkedList<Usuario>();
 		//return usuarios;
 		for(Usuario usuario:usuarios){
-			if(usuario.getNome().equals(nome)){
+			if(usuario.getEmail().equals(email)){
 				usuariosRetorno.add(usuario);
 			}
 		}
@@ -90,6 +90,18 @@ public class Modelo {
 		return usuariosRetorno;
 	}
 	
+//	public List<Chamado> buscarChamadoNumero(int i) {
+//		List<Chamado> ChamadosEncontrados = new LinkedList<Chamado>();
+//		for(Chamado cha:chamados){
+//			if(Modelo.)
+//			if(chamado.getNome().equals(i)){
+//				usuariosRetorno.add(usuario);
+//			}
+//		}
+//		
+//		return ChamadosEncontrados;
+//	}
+//	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
 	}	

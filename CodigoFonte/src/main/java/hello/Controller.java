@@ -37,8 +37,8 @@ public class Controller {
 //	}
 //	
 	public void buscarUsuarios(){
-		get("/chamado/:usuario", (req, res) -> {
-			List<Usuario> usuariosEncontrado = modelo.buscarUsuarios(req.params(":usuario"));	
+		get("/chamado/usuario/:email", (req, res) -> {
+			List<Usuario> usuariosEncontrado = modelo.buscarUsuarios(req.params(":email"));	
 			return new Gson().toJson(usuariosEncontrado);
 		});
 	}
