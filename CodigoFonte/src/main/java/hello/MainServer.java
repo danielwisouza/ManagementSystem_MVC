@@ -28,8 +28,6 @@ public class MainServer {
 		
 		controller.buscarUsuarios();
 		
-
-		
     }
     
     public static void inicializarCarros(){
