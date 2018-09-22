@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>EaysChamados</title>
+    <title>EChamados</title>
 	
 	<script src="js/jquery.js"></script>
 
@@ -13,11 +13,9 @@
 			
 			$("#busca").click(function() {
 
-				var modelo = $( "#modelo option:selected" ).text();
-				var marca = $( "#marca option:selected" ).text();
-				var cor = $( "#cor option:selected" ).text();
-					
-				$("#dadosCarro").empty();
+				var modelo = $( "#usuario option:selected" ).text();
+				
+				$("#dadosusuario").empty();
 					
 				var url = "/carro/"+modelo+"/"+marca+"/"+cor+"";
 					

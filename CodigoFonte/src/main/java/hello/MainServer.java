@@ -3,6 +3,9 @@ package hello;
 import static spark.Spark.port;
 import static spark.Spark.staticFileLocation;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class MainServer {
 	
 	final static Modelo modelo = new Modelo();
@@ -27,12 +30,19 @@ public class MainServer {
 		Controller controller = new Controller(modelo);
 		
 		controller.buscarUsuarios();
+		controller.buscarChamadoNumero();
 		
     }
     
     public static void inicializarCarros(){
-    	//model.addCarro(new Carro("AAA-1111", new Especificacao("gol", "vw", "verde")));
-    	//model.addCarro(new Carro("BBB-1111", new Especificacao("gol", "vw", "verde")));
-    	modelo.addUsuario(new Usuario("Daniel", "Daniel2wis@gmail.com", "Willlians", "123", "ADM"));
-}
+    	modelo.addUsuario(new Usuario("Daniel", "Daniel@gmail.com", "Willlians", "123", "ADM"));
+    	modelo.addUsuario(new Usuario("Thais", "Thais@gmail.com", "Bitencourt", "123", "ADM"));
+    	modelo.addUsuario(new Usuario("Ariene", "Ariene@gmail.com", "Maiara", "123", "ADM"));
+    	modelo.addChamado(new Chamado(1, "joao@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"))); 
+    	modelo.addModulo(new Modulo(133, "Administrador"));
+    	modelo.addModulo(new Modulo(134, "Analista"));
+    	modelo.addModulo(new Modulo(135, "Padão"));
+    	//modelo.addSla(new Sla(324, 6668));
+    	
+    }
 }

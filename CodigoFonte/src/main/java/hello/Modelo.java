@@ -90,18 +90,13 @@ public class Modelo {
 		return usuariosRetorno;
 	}
 	
-//	public List<Chamado> buscarChamadoNumero(int i) {
-//		List<Chamado> ChamadosEncontrados = new LinkedList<Chamado>();
-//		for(Chamado cha:chamados){
-//			if(Modelo.)
-//			if(chamado.getNome().equals(i)){
-//				usuariosRetorno.add(usuario);
-//			}
-//		}
-//		
-//		return ChamadosEncontrados;
-//	}
-//	
+	public Chamado buscarChamadoNumero(int numero){
+		for(Chamado Cha:chamados){
+			if(Cha.getNumeroChamado()==(numero)) return Cha;
+		}
+		return null;
+	}
+	
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
 	}	
@@ -142,5 +137,6 @@ public class Modelo {
     public void addModulo(Modulo modulo) {
     	modulos.add(modulo);
     }
-    
+
+
 }

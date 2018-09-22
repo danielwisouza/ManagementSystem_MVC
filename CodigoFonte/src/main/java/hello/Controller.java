@@ -25,7 +25,13 @@ public class Controller {
 //		});
 //	}
 //	
-	
+	public void buscarChamadoNumero() {
+		get("/chamado/:numero", (req, res) -> {
+			Chamado chamadosEncontrados = modelo.buscarChamadoNumero(req.params(":numero"));
+			//Chamado chamadosEncontrado = modelo.buscarChamadoNumero(req.params(":numero"));	
+			return new Gson().toJson(chamadosEncontrados);
+		});
+	}
 //	public void buscarCarroPlaca(){
 //		get("/carro/:placa", (req, res) -> {
 //		
@@ -42,5 +48,7 @@ public class Controller {
 			return new Gson().toJson(usuariosEncontrado);
 		});
 	}
+	
+
 
 }

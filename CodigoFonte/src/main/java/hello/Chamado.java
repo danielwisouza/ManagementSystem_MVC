@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Chamado {
+	private int numeroChamado;
 	private String usuarioAbertura;
 	private String usuarioResponsavel;
 	private LocalDate dataAbertura;
@@ -22,6 +23,7 @@ public class Chamado {
 	public Chamado(int numeroChamado, String usuarioAbertura, String usuarioResponsavel, LocalDate dataAbertura,
 			LocalDate dataFechamento, String assunto, String descricao, String status, Modulo modulo, Sla sla, Prioridade prioridade) {
 		
+		this.numeroChamado = numeroChamado;
 		this.usuarioAbertura = usuarioAbertura;
 		this.usuarioResponsavel = usuarioResponsavel;
 		this.dataAbertura = dataAbertura;
@@ -36,8 +38,8 @@ public class Chamado {
 
     
     
-	public void setNumeroChamado(int numero) {
-		
+	public void setNumeroChamado(int numeroChamado) {
+		this.numeroChamado = numeroChamado;
 	}
 
 	public String getUsuarioAbertura() {
@@ -133,8 +135,9 @@ public class Chamado {
     }
 	
 	public int getNumeroChamado() { //Serializa o numero do chamado
-		return 1;
-	}
+//		//return 1;
+		return numeroChamado;
+		}
 	
     public void alterarComentario(String comentario, int i) {
 		for(Comentario com:comentarios) {
