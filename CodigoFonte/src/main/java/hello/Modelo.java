@@ -90,13 +90,9 @@ public class Modelo {
 		return usuariosRetorno;
 	}
 	
-	public Chamado buscarChamadoNumero(int numero){
-		for(Chamado Cha:chamados){
-			if(Cha.getNumeroChamado()==(numero)) return Cha;
-		}
-		return null;
-	}
+
 	
+
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
 	}	
@@ -126,17 +122,35 @@ public class Modelo {
 		usuarios.add(usu);
 	}
 	
-    public void addSla(Sla sla) {
+    public void addSla(Sla sla){
     	slas.add(sla);
     }
     
-    public void addPrioridade(Prioridade prioridade) {
+    public void addPrioridade(Prioridade prioridade){
     	prioridades.add(prioridade);
     }
     
-    public void addModulo(Modulo modulo) {
+    public void addModulo(Modulo modulo){
     	modulos.add(modulo);
     }
 
+	public int listarChamadosAbertos(String Status){
+		return 0;
+	}
+	
+	public int listarChamadosFechados(String Status){
+		return 0;
+	}
+	
+	public int listarChamadosUsuario(String Usuario){
+		return 0;
+	}
 
+	public Chamado buscarChamadoNumero(int numero){
+		for(Chamado Cha:chamados){
+			if(Cha.getNumeroChamado()==(numero)) return Cha;
+		}
+		return null;
+	}
+	
 }
