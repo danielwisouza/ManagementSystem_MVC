@@ -1,3 +1,4 @@
+package hello;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -77,11 +78,11 @@ public class Modelo {
 		return usuario;
 	}
 	
-	public List<Usuario> buscarUsuarios(String nome) {
+	public List<Usuario> buscarUsuarios(String email) {
 		List<Usuario> usuariosRetorno = new LinkedList<Usuario>();
 		//return usuarios;
 		for(Usuario usuario:usuarios){
-			if(usuario.getNome().equals(nome)){
+			if(usuario.getEmail().equals(email)){
 				usuariosRetorno.add(usuario);
 			}
 		}
@@ -89,9 +90,13 @@ public class Modelo {
 		return usuariosRetorno;
 	}
 	
+
+	
+
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
-	}
+	}	
+	
 	//alterar descricao do chamado
 	public void alterarDescricaoChamado(int numero, String descricao) {
 		for(Chamado chamado:chamados){
@@ -117,16 +122,35 @@ public class Modelo {
 		usuarios.add(usu);
 	}
 	
-    public void addSla(Sla sla) {
+    public void addSla(Sla sla){
     	slas.add(sla);
     }
     
-    public void addPrioridade(Prioridade prioridade) {
+    public void addPrioridade(Prioridade prioridade){
     	prioridades.add(prioridade);
     }
     
-    public void addModulo(Modulo modulo) {
+    public void addModulo(Modulo modulo){
     	modulos.add(modulo);
     }
-}
 
+	public int listarChamadosAbertos(String Status){
+		return 0;
+	}
+	
+	public int listarChamadosFechados(String Status){
+		return 0;
+	}
+	
+	public int listarChamadosUsuario(String Usuario){
+		return 0;
+	}
+
+	public Chamado buscarChamadoNumero(int numero){
+		for(Chamado Cha:chamados){
+			if(Cha.getNumeroChamado()==(numero)) return Cha;
+		}
+		return null;
+	}
+	
+}
