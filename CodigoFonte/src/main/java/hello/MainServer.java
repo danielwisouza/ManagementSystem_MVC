@@ -25,16 +25,17 @@ public class MainServer {
 		//Servir conteudo html, css e javascript
 		staticFileLocation("/static");
 
-		inicializarCarros();
+		inicializarDados();
 
 		Controller controller = new Controller(modelo);
 		
 		controller.buscarUsuarios();
 		controller.buscarChamadoNumero();
+		controller.buscarChamados();
 		
     }
     
-    public static void inicializarCarros(){
+    public static void inicializarDados(){
     	modelo.addUsuario(new Usuario("Daniel", "daniel@gmail.com", "Willlians", "123", "ADM"));
     	modelo.addUsuario(new Usuario("Thais", "thais@gmail.com", "Bitencourt", "123", "ADM"));
     	modelo.addUsuario(new Usuario("Ariene", "ariene@gmail.com", "Maiara", "123", "ADM"));

@@ -22,6 +22,13 @@ public class Controller {
 			return new Gson().toJson(chamadosEncontrados);
 		});
 	}
+	
+	public void buscarChamados() {
+		get("/listachamados", (req, res) -> {
+			List<Chamado> listaChamados = modelo.buscarChamados();	
+			return new Gson().toJson(listaChamados);
+		});
+	}
 
 	public void buscarUsuarios(){
 		get("/chamado/usuario/:email", (req, res) -> {
