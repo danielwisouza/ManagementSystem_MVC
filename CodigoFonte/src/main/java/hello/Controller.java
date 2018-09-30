@@ -2,6 +2,7 @@ package hello;
 
 import static spark.Spark.get;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -19,7 +20,9 @@ public class Controller {
 	public void buscarChamadoNumero() {
 		get("/chamado/:numero", (req, res) -> {
 			Chamado chamadosEncontrados = modelo.buscarChamadoNumero(Integer.parseInt(req.params(":numero")));	
-			return new Gson().toJson(chamadosEncontrados);
+			List<Chamado> listaChamado = new LinkedList<Chamado>();
+			listaChamado.add(chamadosEncontrados);
+			return new Gson().toJson(listaChamado);
 		});
 	}
 	

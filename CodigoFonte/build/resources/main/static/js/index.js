@@ -5,6 +5,7 @@ $(document).ready(function(){
 
 function listarChamados(url) {
 	$.getJSON(url, function(data) {
+		console.log(url);
 		var qtd = data.length;
 		for(i = 0; i < qtd; i++) {
 			var linha = '<tr>' +
@@ -15,6 +16,7 @@ function listarChamados(url) {
 						'<td><a href="chamado.html?num='+ data[i].numeroChamado + '">Editar</a></td>' +
 					'</tr>';
 			$("#tblChamados > tbody").append(linha);
+			console.log(linha);
 		}
 	});
 }
