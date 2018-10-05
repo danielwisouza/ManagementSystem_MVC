@@ -19,6 +19,10 @@ function listarChamados(url) {
 	});
 }
 
+$("#btnPesq").click(function() {
+	alert("clicou")
+});
+
 function pesquisarChamado(){
 	var numPesq = $("#numPesquisa").val();
 	if (numPesq !== "") {
