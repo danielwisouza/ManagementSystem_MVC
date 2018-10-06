@@ -3,9 +3,10 @@
   	<head>
 	    <meta charset="utf-8">
 	    <title>Help Desk - Inicio</title>
-		
-		<script src="js/jquery.js"></script>
+
 		<link href="css/bootstrap.min.css" rel=stylesheet>
+		<script src="js/jquery.js"></script>
+		<script src="js/index.js"></script>
 	</head>
 	<body>
 	
@@ -20,55 +21,36 @@
 	        		<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
 	      		</li>
       			<li class="nav-item">
-	        		<a class="nav-link" href="chamado.html">Abrir Chamado</a>
+	        		<a class="nav-link" href="chamado.html">Novo Chamado</a>
 	      		</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">Configurações</a>
-		      	</li>
 	    	</ul>
 	  	</div>
 	  	<form class="form-inline">
-    		<input class="form-control mr-sm-2" type="search" placeholder="Número do chamado" aria-label="Search">
-		    <button class="btn btn-outline-secondary my-2 my-sm-0">Procurar</button>
+    		<input id="numPesquisa" class="form-control mr-sm-2" type="search" placeholder="Número do chamado" aria-label="Search">
+		    <button id="btnPesq" onclick="pesquisarChamado()" class="btn btn-outline-secondary my-2 my-sm-0">Procurar</button>
 		</form>
 	</nav>
 	
 	<div class="container">
 		<div class="row">
 			<div class="col mt-3">
-				<button type="button" class="btn btn-info">Abrir Chamado</button>
+				<a href="chamado.html" class="btn btn-info">Novo Chamado</a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col mt-2">
-				<table class="table table-hover">
+				<table class="table table-hover" id="tblChamados">
 				  <thead>
 				    <tr>
 				      <th scope="col">Número</th>
 				      <th scope="col">Assunto</th>
 				      <th scope="col">Assinado para</th>
 				      <th scope="col">Status</th>
+				      <th scope="col"></th>
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr>
-				      <td>0001</td>
-				      <td>Assunto do chamado</td>
-				      <td>Maria</td>
-				      <td>Aberto</td>
-				    </tr>
-				    <tr>
-				      <td>0002</td>
-				      <td>Assunto do chamado</td>
-				      <td>Maria</td>
-				      <td>Aberto</td>
-				    </tr>
-				    <tr>
-				      <td>0003</td>
-				      <td>Assunto do chamado</td>
-				      <td>Maria</td>
-				      <td>Aberto</td>
-				    </tr>
+				    
 				  </tbody>
 				</table>
 			</div>

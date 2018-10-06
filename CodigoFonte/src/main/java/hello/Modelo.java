@@ -91,8 +91,6 @@ public class Modelo {
 	}
 	
 
-	
-
 	public void addChamado(Chamado chamado) {
 		chamados.add(chamado);
 	}	
@@ -144,6 +142,14 @@ public class Modelo {
 	
 	public int listarChamadosUsuario(String Usuario){
 		return 0;
+	}
+	
+	public List<Chamado> buscarChamados() {
+		List<Chamado> listaChamados = new LinkedList<Chamado>();
+		for(Chamado Cha:chamados){
+			listaChamados.add(Cha);
+		}
+		return listaChamados;
 	}
 
 	public Chamado buscarChamadoNumero(int numero){

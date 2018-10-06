@@ -32,7 +32,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col mt-3">
-				<h2 class="text-center">Chamado</h2>
+				<h2 class="text-center">Novo Chamado</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -57,21 +57,20 @@
 							    </div>
 							    <div class="form-group offset-md-3 col-md-3">
 							      <label for="data">Data</label>
-							      <input type="text" class="form-control" id="data" />
+							      <input type="date" class="form-control" id="data" />
 							    </div>
 							  </div>
 							  <div class="form-row">
 							    <div class="form-group col-md-5">
 							      <label for="usuarioAbertura">Usuário de abertura</label>
-							      <input type="text" class="form-control" id="usuarioAbertura" readonly />
+							    <input type="text" class="form-control" id="usuarioAbertura" readonly />
 							    </div>
 							    <div class="form-group offset-md-1 col-md-5">
 							      <label for="analista">Assinar para</label>
-							      <input type="text" class="form-control" id="analista" readonly />
-							      <!-- <select id="analista" class="form-control">
+							      <select id="analista" class="form-control">
 							        <option selected>Analista</option>
 							        <option>...</option>
-							      </select> -->
+							      </select>
 							    </div>
 							  </div>
 							  <div class="form-row">
@@ -85,13 +84,7 @@
 							    </div>
 							    <div class="form-group offset-md-3 col-md-3">
 							      <label for="dataLimite">Data Limite</label>
-							      <input type="text" class="form-control" id="dataLimite" />
-							    </div>
-							  </div>
-							  <div class="form-row">
-							    <div class="form-group col-md-3">
-							      <label for="status">Status</label>
-							      <input type="text" class="form-control" id="status" readonly />
+							      <input type="date" class="form-control" id="dataLimite" />
 							    </div>
 							  </div>
 							  <div class="form-row">
@@ -234,8 +227,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<script src="js/carregar_chamado.js"></script>
 	
 	</body>
   
