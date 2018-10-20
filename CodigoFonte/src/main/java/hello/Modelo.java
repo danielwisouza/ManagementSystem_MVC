@@ -2,15 +2,24 @@ package hello;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
+import com.db4o.ObjectSet;
+import com.db4o.query.Query;
 
 public class Modelo {
-private Administrador administrador;
-	private List<Usuario> usuarios = new LinkedList<Usuario>();
-	private List<Chamado> chamados = new LinkedList<Chamado>();
-	private List<Sla> slas = new LinkedList<Sla>();
-	private List<Prioridade> prioridades = new LinkedList<Prioridade>();
-	private List<Modulo> modulos = new LinkedList<Modulo>();
+	ObjectContainer Administrador = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Administrador.db4o");
+	ObjectContainer Usuario = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Usuario.db4o");
+	ObjectContainer Sla = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Sla.db4o");
+	ObjectContainer Prioridade = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Prioridade.db4o");
+	ObjectContainer Modulo = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Modulo.db4o");
+
+//	private Administrador administrador;
+//	private List<Usuario> usuarios = new LinkedList<Usuario>();
+//	private List<Usuario> chamados = new LinkedList<Chamado>();
+//	private List<Sla> slas = new LinkedList<Sla>();
+//	private List<Prioridade> prioridades = new LinkedList<Prioridade>();
+//	private List<Modulo> modulos = new LinkedList<Modulo>();
 
 // Gets e sets
 	public Administrador getAdministrador() {
