@@ -2,8 +2,10 @@ package hello;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.db4o.ObjectContainer;
+
 public class Modelo {
-	private Administrador administrador;
+private Administrador administrador;
 	private List<Usuario> usuarios = new LinkedList<Usuario>();
 	private List<Chamado> chamados = new LinkedList<Chamado>();
 	private List<Sla> slas = new LinkedList<Sla>();
