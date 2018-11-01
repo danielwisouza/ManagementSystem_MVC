@@ -34,7 +34,6 @@ public class Modelo {
 	    
 	    return true;
 	}
-
 //	public Administrador getAdministrador() {
 //		return administrador;
 //	}
