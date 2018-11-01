@@ -21,7 +21,7 @@ public class MainServer {
 
 		//Servir conteudo html, css e javascript
 		staticFileLocation("/static");
-
+// Teste com git
 		inicializarDados();
 
 		Controller controller = new Controller(modelo);
