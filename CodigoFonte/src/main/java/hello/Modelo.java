@@ -34,6 +34,29 @@ public class Modelo {
 	    
 	    return true;
 	}
+	public boolean addUsuario(Usuario Usuario){
+		if(isUsuarioUserAvailable(Usuario.getEmail())){
+			
+			this.Usuario.store(Usuario);
+			this.Usuario.commit();
+			
+			return true;
+		}
+		
+		return false;
+	}	
+	
+	private boolean isUsuarioUserAvailable(String email) {
+		Query query = Usuario.query();
+		query.constrain(Usuario.class);
+	    ObjectSet<Usuario> allUsuario = query.execute();
+	    
+	    for(Usuario Usuario:allUsuario){
+	    	if(Usuario.getEmail().equals(email)) return false;
+	    }
+	    
+	    return true;
+	}
 //	public Administrador getAdministrador() {
 //		return administrador;
 //	}
