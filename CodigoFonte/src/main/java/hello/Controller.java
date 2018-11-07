@@ -25,8 +25,6 @@ public class Controller {
 			@Override
             public Object handle(final Request request, final Response response){
 	        	
-	        	 
-	        	 
 	        	response.header("Access-Control-Allow-Origin", "*");
 	        	 
 	            try {
@@ -47,12 +45,10 @@ public class Controller {
 	            		
 	            	} else {
 	            		
-	            		
-	            		
+	
 	            	}
 	            	
-	            	
-	             	
+
 	        		} catch (JSONException e) {
 	        				
 	        			//e.printStackTrace();
@@ -63,7 +59,7 @@ public class Controller {
 	            JSONArray jsonResult = new JSONArray();
          	    JSONObject jsonObj = new JSONObject();
 
-        		jsonObj.put("ra", 0);
+        		jsonObj.put("nome", 0);
         		
         		
              	jsonResult.put(jsonObj);
