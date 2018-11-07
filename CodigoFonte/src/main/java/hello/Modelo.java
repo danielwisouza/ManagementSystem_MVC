@@ -34,6 +34,7 @@ public class Modelo {
 	    
 	    return true;
 	}
+	
 	public boolean addUsuario(Usuario Usuario){
 		if(isUsuarioUserAvailable(Usuario.getEmail())){
 			
@@ -44,7 +45,8 @@ public class Modelo {
 		}
 		
 		return false;
-	}	
+	}
+	
 	
 	private boolean isUsuarioUserAvailable(String email) {
 		Query query = Usuario.query();
@@ -56,6 +58,41 @@ public class Modelo {
 	    }
 	    
 	    return true;
+	}
+	
+	public Usuario BuscaUsuarioEmail(String EmailBusca){
+		
+		
+		Query query = Usuario.query();
+		query.constrain(Usuario.class);
+	    ObjectSet<Usuario> allUsuario = query.execute();
+		
+	    for(Usuario Usuario:allUsuario){
+	    	if(Usuario.getEmail()==EmailBusca){
+	    		return Usuario;
+	    	}
+	    }
+	    return null;
+	}
+	
+	
+	//Arrumando para tela de Login gerenciavel
+	
+	public Usuario login(String username, String password){
+		
+		Query query = Usuario.query();
+		query.constrain(Usuario.class);
+	    ObjectSet<Usuario> allUsuario = query.execute();
+	    
+	    for(Usuario Usuario:allUsuario){
+	    	if(Usuario.getEmail().equals(username) && Usuario.getPassword().equals(password)){
+	    		
+	    		return Usuario;
+	    	}
+	    	
+	    }
+	    
+	    return null;
 	}
 //	public Administrador getAdministrador() {
 //		return administrador;
