@@ -1,6 +1,12 @@
 package hello;
 
 public class Comentario {
+	@Override
+	public String toString() {
+		return "Comentario [comentario=" + comentario + ", usuario=" + usuario + ", numeroChamado=" + numeroChamado
+				+ "]";
+	}
+
 	private String comentario;
 	private Usuario usuario;
 	private Chamado numeroChamado;

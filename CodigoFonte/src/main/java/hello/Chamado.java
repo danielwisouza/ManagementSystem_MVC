@@ -4,6 +4,15 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Chamado {
+	@Override
+	public String toString() {
+		return "Chamado [numeroChamado=" + numeroChamado + ", usuarioAbertura=" + usuarioAbertura
+				+ ", usuarioResponsavel=" + usuarioResponsavel + ", dataAbertura=" + dataAbertura + ", dataFechamento="
+				+ dataFechamento + ", assunto=" + assunto + ", descricao=" + descricao + ", status=" + status
+				+ ", comentarios=" + comentarios + ", modulo=" + modulo + ", sla=" + sla + ", prioridade=" + prioridade
+				+ "]";
+	}
+
 	private int numeroChamado;
 	private String usuarioAbertura;
 	private String usuarioResponsavel;

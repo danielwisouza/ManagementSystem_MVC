@@ -30,7 +30,6 @@ public class MainServer {
 //		
     }
     
-    
     public static void inicializarDados(){
     	modelo.addAdministrador(new Administrador("daniel.souza", "12345"));
     	modelo.addUsuario(new Usuario("Daniel", "daniel@gmail.com", "Willlians", "123", "ADM"));

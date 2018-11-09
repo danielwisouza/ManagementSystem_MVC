@@ -1,6 +1,10 @@
 package hello;
 
 public class Modulo {
+	@Override
+	public String toString() {
+		return "Modulo [idModulo=" + idModulo + ", nomeModulo=" + nomeModulo + "]";
+	}
 	private int idModulo;
 	private String nomeModulo;
 	
