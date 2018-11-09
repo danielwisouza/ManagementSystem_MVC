@@ -1,6 +1,10 @@
 package hello;
 
 public class Prioridade {
+	@Override
+	public String toString() {
+		return "Prioridade [idPrioridade=" + idPrioridade + ", criticidade=" + criticidade + "]";
+	}
 	private int idPrioridade;
 	private String criticidade;
 	
