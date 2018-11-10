@@ -2,6 +2,11 @@ package hello;
 import java.time.LocalDate;
 
 public class Sla {
+	@Override
+	public String toString() {
+		return "Sla [idSla=" + idSla + ", duracao=" + duracao + "]";
+	}
+
 	private int idSla;
 	private LocalDate duracao;	
 
