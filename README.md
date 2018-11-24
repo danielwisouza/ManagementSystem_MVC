@@ -5,4 +5,4 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 
 <img align="center" src="Fluxograma/Fluxograma.jpg" alt="Imagem" width="90%"/>
 
-## Mais sobre o projeto  [Documentação](Documentação.md) pagina.
+## Mais sobre o projeto  [Documentação](Documentação.md) página.
