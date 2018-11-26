@@ -1,10 +1,17 @@
 package hello;
 
 import static spark.Spark.get;
+import static spark.Spark.post;
 
+import java.util.List;
+import java.util.LinkedList;
+
+import org.eclipse.jetty.websocket.api.StatusCode;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.google.gson.Gson;
 
 import spark.Request;
 import spark.Response;
@@ -73,6 +80,29 @@ public class Controller {
 			
 
 	}
+	
+	public void usuarios() {
+		
+		get("/usuarios", (req, res) -> {
+			List<Chamado> listaChamado = new LinkedList<Chamado>();
+			//listaChamado.add(chamadosEncontrados);
+			return new Gson().toJson(listaChamado);
+		});
+		
+		post("/usuarios", (request, response) -> {
+		    response.type("application/json");
+		    Usuario usuario = new Gson().fromJson(request.body(), Usuario.class);
+		    Boolean ret = modelo.addUsuario(usuario);
+		    
+		    String json_str = "{\"status\":\""+ ret.toString() +"\"}";
+		 
+		    return new Gson().toJson(json_str);
+		});
+		
+		
+	}
+	
+	
 //	public void buscarChamadoNumero() {
 //		get("/chamado/:numero", (req, res) -> {
 //			Chamado chamadosEncontrados = modelo.buscarChamadoNumero(Integer.parseInt(req.params(":numero")));	
