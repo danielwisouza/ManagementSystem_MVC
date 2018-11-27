@@ -66,7 +66,7 @@ public class Controller {
 	            JSONArray jsonResult = new JSONArray();
          	    JSONObject jsonObj = new JSONObject();
 
-        		jsonObj.put("nome", 0);
+        		jsonObj.put("nome33", 0);
         		
         		
              	jsonResult.put(jsonObj);
@@ -84,24 +84,26 @@ public class Controller {
 	public void usuarios() {
 		
 		get("/usuarios", (req, res) -> {
-			List<Chamado> listaChamado = new LinkedList<Chamado>();
-			//listaChamado.add(chamadosEncontrados);
-			return new Gson().toJson(listaChamado);
+			List<Usuario> listaUsuario = new LinkedList<Usuario>();
+			listaUsuario = modelo.listarUsuarios();
+		    return new Gson().toJson(listaUsuario);
 		});
 		
 		post("/usuarios", (request, response) -> {
+			
 		    response.type("application/json");
 		    Usuario usuario = new Gson().fromJson(request.body(), Usuario.class);
 		    Boolean ret = modelo.addUsuario(usuario);
 		    
-		    String json_str = "{\"status\":\""+ ret.toString() +"\"}";
+		    String json_str = "{\"success\":\""+ ret.toString() +"\"}";
 		 
 		    return new Gson().toJson(json_str);
 		});
-		
-		
 	}
 	
+	public void chamados() {
+		
+	}
 	
 //	public void buscarChamadoNumero() {
 //		get("/chamado/:numero", (req, res) -> {

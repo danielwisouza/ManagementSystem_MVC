@@ -1,4 +1,7 @@
 package hello;
+import java.util.LinkedList;
+import java.util.List;
+
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
@@ -44,7 +47,7 @@ public class Modelo {
 			return true;
 		}
 		
-		return false;
+		return false; 
 	}
 	
 	
@@ -58,6 +61,20 @@ public class Modelo {
 	    }
 	    
 	    return true;
+	}
+	
+	public List<Usuario> listarUsuarios() {
+		List<Usuario> listaUsuario = new LinkedList<Usuario>();
+		
+		Query query = Usuario.query();
+		query.constrain(Usuario.class);
+	    ObjectSet<Usuario> allUsuario = query.execute();
+	    
+	    for(Usuario Usuario:allUsuario){
+	    	listaUsuario.add(Usuario);
+	    }
+	    
+	    return listaUsuario;
 	}
 	
 	public Usuario BuscaUsuarioEmail(String EmailBusca){
