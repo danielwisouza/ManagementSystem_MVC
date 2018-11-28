@@ -13,4 +13,10 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 ### Login
 <img align="center" src="Imagem/Login.jpg" alt="Imagem"/>
 
+### Cadastro de Usuários
+<img align="center" src="Imagem/Cadastro_Usuario.PNG" alt="Imagem"/>
+
+### Lista Usuários
+<img align="center" src="Imagem/Listar_Usuario.PNG" alt="Imagem"/>
+
 ### Mais sobre o projeto  [Documentação](Documentação.md) página.
