@@ -3,10 +3,9 @@ package hello;
 import static spark.Spark.get;
 import static spark.Spark.post;
 
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
 
-import org.eclipse.jetty.websocket.api.StatusCode;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -27,7 +26,6 @@ public class Controller {
 	}
 		
 	public void getLogin(){
-		
 		get("/login/:username/:password", new Route() {
 			@Override
             public Object handle(final Request request, final Response response){
