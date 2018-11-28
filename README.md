@@ -11,6 +11,6 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 
 ## Telas
 ### Login
-<img align="center" src="Fluxograma/Login.png" alt="Imagem"/>
+<img align="center" src="Fluxograma/Login.PNG" alt="Imagem"/>
 
 ### Mais sobre o projeto  [Documentação](Documentação.md) página.
