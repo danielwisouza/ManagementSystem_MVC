@@ -103,31 +103,23 @@ public class Controller {
 	
 	public void chamados() {
 		
+		get("/chamados", (req, res) -> {
+			List<Chamado> listaChamados = new LinkedList<Chamado>();
+			listaChamados = modelo.listarChamados();
+		    return new Gson().toJson(listaChamados);
+		});
+		
+		post("/chamados", (request, response) -> {
+			
+		    response.type("application/json");
+		    Chamado chamado = new Gson().fromJson(request.body(), Chamado.class);
+		    Boolean ret = modelo.addChamado(chamado);
+		    
+		    String json_str = "{\"success\":\""+ ret.toString() +"\"}";
+		 
+		    return new Gson().toJson(json_str);
+		});
 	}
-	
-//	public void buscarChamadoNumero() {
-//		get("/chamado/:numero", (req, res) -> {
-//			Chamado chamadosEncontrados = modelo.buscarChamadoNumero(Integer.parseInt(req.params(":numero")));	
-//			List<Chamado> listaChamado = new LinkedList<Chamado>();
-//			listaChamado.add(chamadosEncontrados);
-//			return new Gson().toJson(listaChamado);
-//		});
-//	}
-	
-//	public void buscarChamados() {
-//		get("/listachamados", (req, res) -> {
-//			List<Chamado> listaChamados = modelo.buscarChamados();	
-//			return new Gson().toJson(listaChamados);
-//		});
-//	}
-
-//	public void buscarUsuarios(){
-//		get("/chamado/usuario/:email", (req, res) -> {
-//			List<Usuario> usuariosEncontrado = modelo.buscarUsuarios(req.params(":email"));	
-//			return new Gson().toJson(usuariosEncontrado);
-//		});
-//	}
-//	
 
 
 }
