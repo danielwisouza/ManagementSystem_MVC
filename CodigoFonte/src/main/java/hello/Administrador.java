@@ -10,7 +10,12 @@ public Administrador(String username, String password) {
 	this.password = password;
 }
 	
-// Gets e sets
+@Override
+public String toString() {
+	return "Administrador [username=" + username + ", password=" + password + "]";
+}
+
+	// Gets e sets
 	public String getUsername() {
 		return username;
 	}

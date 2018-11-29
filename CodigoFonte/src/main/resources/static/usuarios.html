@@ -2,11 +2,11 @@
 <html lang="en">
   	<head>
 	    <meta charset="utf-8">
-	    <title>Help Desk - Inicio</title>
+	    <title>Help Desk - Usuários</title>
 
 		<link href="css/bootstrap.min.css" rel=stylesheet>
 		<script src="js/jquery.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/usuario.js"></script>
 	</head>
 	<body>
 	
@@ -18,13 +18,7 @@
 	  	<div class="collapse navbar-collapse" id="navbarNav">
 	    	<ul class="navbar-nav">
 	      		<li class="nav-item active">
-	        		<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-	      		</li>
-      			<li class="nav-item">
-	        		<a class="nav-link" href="chamado.html">Novo Chamado</a>
-	      		</li>
-	      		<li class="nav-item">
-	        		<a class="nav-link" href="usuarios.html">Usuários</a>
+	        		<a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
 	      		</li>
 	    	</ul>
 	  	</div>
@@ -37,18 +31,18 @@
 	<div class="container">
 		<div class="row">
 			<div class="col mt-3">
-				<a href="chamado.html" class="btn btn-info">Novo Chamado</a>
+				<a href="novo_usuario.html" class="btn btn-info">Novo Usuário</a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col mt-2">
-				<table class="table table-hover" id="tblChamados">
+				<table class="table table-hover" id="tblUsuarios">
 				  <thead>
 				    <tr>
-				      <th scope="col">Número</th>
-				      <th scope="col">Assunto</th>
-				      <th scope="col">Assinado para</th>
-				      <th scope="col">Status</th>
+				      <th scope="col">Nome</th>
+				      <th scope="col">E-mail</th>
+				      <th scope="col">Username</th>
+				      <th scope="col">Tipo</th>
 				      <th scope="col"></th>
 				    </tr>
 				  </thead>
@@ -61,5 +55,11 @@
 	</div>
 	
 	</body>
+	
+	<script>
+		$(document).ready(function(){
+			listarUsuarios(); //usuarios.js
+		});
+	</script>
   
 </html>

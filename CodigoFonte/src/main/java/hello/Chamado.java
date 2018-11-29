@@ -1,27 +1,36 @@
 package hello;
-import java.time.LocalDate;
-import java.util.LinkedList;
-import java.util.List;
+
+//import java.util.LinkedList;
+//import java.util.List;
 
 public class Chamado {
+	@Override
+	public String toString() {
+		return "Chamado [numeroChamado=" + numeroChamado + ", usuarioAbertura=" + usuarioAbertura
+				+ ", usuarioResponsavel=" + usuarioResponsavel + ", dataAbertura=" + dataAbertura + ", dataFechamento="
+				+ dataFechamento + ", assunto=" + assunto + ", descricao=" + descricao + ", status=" + status
+				+ ", prioridade=" + prioridade
+				+ "]";
+	}
+
 	private int numeroChamado;
 	private String usuarioAbertura;
 	private String usuarioResponsavel;
-	private LocalDate dataAbertura;
-	private LocalDate dataFechamento;
+	private String dataAbertura;
+	private String dataFechamento;
 	private String assunto;
 	private String descricao;
 	private String status;
-	private List<Comentario> comentarios = new LinkedList<Comentario>();
-	private Modulo modulo;
-	private Sla sla;
-	private Prioridade prioridade;
+	//private List<Comentario> comentarios = new LinkedList<Comentario>();
+	//private Modulo modulo;
+	//private Sla sla;
+	private String prioridade;
 	
 	
 	
 	
-	public Chamado(int numeroChamado, String usuarioAbertura, String usuarioResponsavel, LocalDate dataAbertura,
-			LocalDate dataFechamento, String assunto, String descricao, String status, Modulo modulo, Sla sla, Prioridade prioridade) {
+	public Chamado(int numeroChamado, String usuarioAbertura, String usuarioResponsavel, String dataAbertura,
+			String dataFechamento, String assunto, String descricao, String status, String prioridade) {
 		
 		this.numeroChamado = numeroChamado;
 		this.usuarioAbertura = usuarioAbertura;
@@ -31,8 +40,8 @@ public class Chamado {
 		this.assunto = assunto;
 		this.descricao = descricao;
 		this.status = status;
-		this.modulo = modulo;
-		this.sla = sla;
+		//this.modulo = modulo;
+		//this.sla = sla;
 		this.prioridade = prioridade;
 	}
 
@@ -58,19 +67,19 @@ public class Chamado {
 		this.usuarioResponsavel = usuarioResponsavel;
 	}
 
-	public LocalDate getDataAbertura() {
+	public String getDataAbertura() {
 		return dataAbertura;
 	}
 
-	public void setDataAbertura(LocalDate dataAbertura) {
+	public void setDataAbertura(String dataAbertura) {
 		this.dataAbertura = dataAbertura;
 	}
 
-	public LocalDate getDataFechamento() {
+	public String getDataFechamento() {
 		return dataFechamento;
 	}
 
-	public void setDataFechamento(LocalDate dataFechamento) {
+	public void setDataFechamento(String dataFechamento) {
 		this.dataFechamento = dataFechamento;
 	}
 
@@ -98,7 +107,7 @@ public class Chamado {
 		this.status = status;
 	}
 
-	public List<Comentario> getComentarios() {
+	/*public List<Comentario> getComentarios() {
 		
 		return comentarios;
 	}
@@ -121,25 +130,25 @@ public class Chamado {
 
 	public void setSla(Sla sla) {
 		this.sla = sla;
-	}
+	}*/
 
-	public Prioridade getPrioridade() {
+	public String getPrioridade() {
 		return prioridade;
 	}
 
-	public void setPrioridade(Prioridade prioridade) {
+	public void setPrioridade(String prioridade) {
 		this.prioridade = prioridade;
 	}
-	public void addComentario(Comentario comentario) {
-    	comentarios.add(comentario);
-    }
+	//public void addComentario(Comentario comentario) {
+    //	comentarios.add(comentario);
+    //}
 	
 	public int getNumeroChamado() { //Serializa o numero do chamado
 //		//return 1;
 		return numeroChamado;
-		}
+	}
 	
-    public void alterarComentario(String comentario, int i) {
+    /*public void alterarComentario(String comentario, int i) {
 		for(Comentario com:comentarios) {
 			if(com.getNumeroChamado()== i) {
 				com.setcomentario(comentario);
@@ -154,6 +163,6 @@ public class Chamado {
 		}
 		return i;
 
-	}
+	}*/
 	
 }
