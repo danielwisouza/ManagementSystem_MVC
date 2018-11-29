@@ -113,6 +113,10 @@ public class Controller {
 			
 		    response.type("application/json");
 		    Chamado chamado = new Gson().fromJson(request.body(), Chamado.class);
+		    
+		    Integer numeroChamado = modelo.getNextCodeChamado();
+		    chamado.setNumeroChamado(numeroChamado);
+		    
 		    Boolean ret = modelo.addChamado(chamado);
 		    
 		    String json_str = "{\"success\":\""+ ret.toString() +"\"}";

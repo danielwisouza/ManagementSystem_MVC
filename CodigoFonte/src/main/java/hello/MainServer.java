@@ -26,6 +26,8 @@ public class MainServer {
         staticFileLocation("/static");
 		
         Controller controller = new Controller(modelo); 
+        
+        inicializarDados();
 		
 		controller.getLogin();
 		controller.usuarios();
@@ -39,6 +41,6 @@ public class MainServer {
     	//modelo.addUsuario(new Usuario("Ariene", "ariene@gmail.com", "Maiara", "123", "ADM"));
  //   	modelo.addChamado(new Chamado(1, "joao@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"))); 
 //    	modelo.addChamado(new Chamado(2, "daniel@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"))); 
-    	modelo.addChamado(new Chamado(3, "thais@gmail.com", "maria@gmail.com", LocalDate.of(2018, Month.MAY, 11), LocalDate.of(2018, Month.AUGUST, 20), "ola", "problema", "urgente", new Modulo(12, "aaa"), new Sla(12, LocalDate.of(2018, Month.AUGUST, 1)), new Prioridade(23, "alta"))); 	
+    	modelo.addChamado(new Chamado(1, "thais@gmail.com", "maria@gmail.com", "28/11/2018", "30/11/2018", "ola", "problema", "urgente", "Alta")); 	
     }
 }

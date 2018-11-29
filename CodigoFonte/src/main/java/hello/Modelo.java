@@ -1,6 +1,7 @@
 package hello;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
@@ -126,6 +127,19 @@ public class Modelo {
 	    }
 	    
 	    return listaChamado;
+		
+	}
+	
+	public Integer getNextCodeChamado() {
+		List<Chamado> listaChamado = listarChamados();
+		
+		Integer cod = 0;
+		cod = listaChamado
+	      .stream()
+	      .mapToInt(v -> v.getNumeroChamado())
+	      .max().orElseThrow(NoSuchElementException::new);
+		
+		return cod + 1;
 		
 	}
 	
