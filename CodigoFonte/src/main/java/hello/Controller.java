@@ -103,6 +103,23 @@ public class Controller {
 	
 	public void chamados() {
 		
+		get("/chamados", (req, res) -> {
+			List<Chamado> listaChamado = new LinkedList<Chamado>();
+			listaChamado = modelo.listarChamados();
+		    return new Gson().toJson(listaChamado);
+		});
+		
+		post("/chamados", (request, response) -> {
+			
+		    response.type("application/json");
+		    Chamado chamado = new Gson().fromJson(request.body(), Chamado.class);
+		    Boolean ret = modelo.addChamado(chamado);
+		    
+		    String json_str = "{\"success\":\""+ ret.toString() +"\"}";
+		 
+		    return new Gson().toJson(json_str);
+		});
+		
 	}
 	
 //	public void buscarChamadoNumero() {

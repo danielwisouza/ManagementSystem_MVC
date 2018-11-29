@@ -9,6 +9,7 @@ import com.db4o.query.Query;
 
 public class Modelo {
 	ObjectContainer Administrador = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Administrador.db4o");
+	ObjectContainer Chamado = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Chamado.db4o");
 	ObjectContainer Usuario = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Usuario.db4o");
 	ObjectContainer Sla = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Sla.db4o");
 	ObjectContainer Prioridade = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/Prioridade.db4o");
@@ -38,6 +39,8 @@ public class Modelo {
 	    return true;
 	}
 	
+	
+	//--------------------- USUARIOS ---------------------
 	public boolean addUsuario(Usuario Usuario){
 		if(isUsuarioUserAvailable(Usuario.getEmail())){
 			
@@ -92,9 +95,6 @@ public class Modelo {
 	    return null;
 	}
 	
-	
-	//Arrumando para tela de Login gerenciavel
-	
 	public Usuario login(String username, String password){
 		
 		Query query = Usuario.query();
@@ -111,6 +111,40 @@ public class Modelo {
 	    
 	    return null;
 	}
+	
+	//--------------------- CHAMADOS ---------------------
+	public List<Chamado> listarChamados() {
+		
+		List<Chamado> listaChamado = new LinkedList<Chamado>();
+		
+		Query query = Chamado.query();
+		query.constrain(Chamado.class);
+		ObjectSet<Chamado> allChamado = query.execute();
+		
+	    for(Chamado chamado:allChamado){
+	    	listaChamado.add(chamado);
+	    }
+	    
+	    return listaChamado;
+		
+	}
+	
+	public boolean addChamado(Chamado chamado){
+
+		try {
+			this.Chamado.store(chamado);
+			this.Chamado.commit();
+			
+			return true;
+		}
+		catch (Exception ex){
+			return false; 
+		}
+
+	}
+	
+	
+	
 //	public Administrador getAdministrador() {
 //		return administrador;
 //	}
