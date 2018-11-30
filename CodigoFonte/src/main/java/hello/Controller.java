@@ -109,6 +109,11 @@ public class Controller {
 		    return new Gson().toJson(listaChamado);
 		});
 		
+		get("/chamados/:numero", (req, res) -> {
+			Chamado chamado = modelo.buscarChamado(Integer.parseInt(req.params(":numero")));
+		    return new Gson().toJson(chamado);
+		});
+		
 		post("/chamados", (request, response) -> {
 			
 		    response.type("application/json");

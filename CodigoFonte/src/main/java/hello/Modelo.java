@@ -130,6 +130,19 @@ public class Modelo {
 		
 	}
 	
+	public Chamado buscarChamado(Integer numero) {
+		Query query = Chamado.query();
+		query.constrain(Chamado.class);
+		ObjectSet<Chamado> allChamado = query.execute();
+		
+	    for(Chamado chamado:allChamado){
+	    	if(chamado.getNumeroChamado() == numero)
+	    		return chamado;
+	    }
+	    
+	    return null;
+	}
+	
 	public Integer getNextCodeChamado() {
 		List<Chamado> listaChamado = listarChamados();
 		

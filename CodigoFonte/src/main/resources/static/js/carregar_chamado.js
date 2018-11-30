@@ -24,16 +24,14 @@ $(document).ready(function(){
 	
 	if (numeroChamado != undefined) {
 		//busca os dados do chamado recebido de parametro
-		url = '/chamado/' + numeroChamado;
+		url = '/chamados/' + numeroChamado;
 		$.getJSON(url, function(data) {
 			console.log(data);
 			
 			$("#numero").val(data.numeroChamado);
-			var dataChamado = formataData(data.dataAbertura.day, data.dataAbertura.month, data.dataAbertura.year);
-			$("#data").val(dataChamado);
-			dataChamado = formataData(data.dataFechamento.day, data.dataFechamento.month, data.dataFechamento.year);
-			$("#dataLimite").val(dataChamado);
-			$("#usuarioAbertura").val(data.usuarioAbertura);
+			$("#data").val(data.dataAbertura);
+			$("#data-limite").val(data.dataFechamento);
+			$("#usuario-abertura").val(data.usuarioAbertura);
 			$("#analista").val(data.usuarioResponsavel);
 			$("#status").val(data.status);
 			$("#assunto").val(data.assunto);

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	url = '/listachamados';
+	url = '/chamados';
 	listarChamados(url);
 });
 
@@ -24,17 +24,17 @@ $("#btnPesq").click(function() {
 });
 
 function pesquisarChamado(){
-	var numPesq = $("#numPesquisa").val();
-	if (numPesq !== "") {
-		$("#tblChamados > tbody > tr").remove();
+	//var numPesq = $("#numPesquisa").val();
+	//if (numPesq !== "") {
+	//	$("#tblChamados > tbody > tr").remove();
 		
-		url = '/chamado/'+numPesq;
-		listarChamados(url);
-	}
-	else{
+	//	url = '/chamado/'+numPesq;
+	//	listarChamados(url);
+	//}
+	//else{
 		$("#tblChamados > tbody > tr").remove();
-		url = '/listachamados';
+		url = '/chamados';
 		listarChamados(url);
-	}
+	//}
 	
 }

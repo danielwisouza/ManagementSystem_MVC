@@ -15,22 +15,32 @@ $(document).ready(function(){
 				"descricao" : $("#descricao").val(), 
 				"status" : $("#status").val(), 
 				"prioridade": $( "#prioridade option:selected" ).val()
-	};
+		};
 		
-		console.log(objForm);
+		var numeroChamado = queryString("num");
 		
-		$.post('/chamados', JSON.stringify(objForm)).done(function(response){
-			var retorno = JSON.parse(response);
-			console.log(retorno)
-			if (retorno.success == "true") {
-				alert("Dados gravados!");
-				$("#btn-voltar").click();
-			}
-			else {
-				alert("Erro ao gravar os dados!");
-			}
-		      
-		});
+		if (numeroChamado) { //Alteração
+			
+		} 
+		else { //Inclusao
+			console.log(objForm);
+			
+			$.post('/chamados', JSON.stringify(objForm)).done(function(response){
+				var retorno = JSON.parse(response);
+				console.log(retorno)
+				if (retorno.success == "true") {
+					alert("Dados gravados!");
+					$("#btn-voltar").click();
+				}
+				else {
+					alert("Erro ao gravar os dados!");
+				}
+			      
+			});
+		}
+		
+		
+		
 		
 
 		event.preventDefault();
