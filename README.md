@@ -1,6 +1,4 @@
-﻿
-
-# O PROJETO <img align="center" src="Imagem/Logo.png" alt="Imagem" width="150" heigth="300"/>
+﻿# O PROJETO <img align="center" src="Imagem/Logo.png" alt="Imagem" width="150" heigth="300"/>
 
 
 Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído de colocar em pratica todo contudo aprendido na disciplina Engenharia de Software e Laboratórios de Desenvolvimento III.
@@ -21,5 +19,8 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 
 ### Cadastro de Chamado
 <img align="center" src="Imagem/Cadastro_Chamado.PNG" alt="Imagem"/>
+
+### Listar Chamados
+<img align="center" src="Imagem/Listar_Chamados.PNG" alt="Imagem"/>
 
 ### Mais sobre o projeto  [Documentação](Documentação.md) página.
