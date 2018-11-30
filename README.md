@@ -1,4 +1,4 @@
-
+﻿
 
 # O PROJETO <img align="center" src="Imagem/Logo.png" alt="Imagem" width="150" heigth="300"/>
 
@@ -18,5 +18,8 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 
 ### Lista Usuários
 <img align="center" src="Imagem/Listar_Usuario.PNG" alt="Imagem"/>
+
+### Cadastro de Chamado
+<img align="center" src="Imagem/Cadastro_Chamado.PNG" alt="Imagem"/>
 
 ### Mais sobre o projeto  [Documentação](Documentação.md) página.
