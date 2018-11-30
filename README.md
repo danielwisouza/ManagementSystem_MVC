@@ -3,9 +3,14 @@
 
 Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído de colocar em pratica todo contudo aprendido na disciplina Engenharia de Software e Laboratórios de Desenvolvimento III.
 
+### Grupo
+#### Ariene Maiara
+#### Daniel Willians
+#### Thais Bitencourt
+
 ## Fluxograma
 
-<img align="center" src="Fluxograma/Fluxograma.jpg" alt="Imagem" width="90%"/>
+<img align="center" src="Imagem/UML.jpg" alt="Imagem" width="90%"/>
 
 ## Telas
 ### Login
