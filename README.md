@@ -26,6 +26,6 @@ Criar uma aplicação para Gerenciamento de chamados de Help-Desk, com intuído 
 <img align="center" src="Imagem/Cadastro_Chamado.PNG" alt="Imagem"/>
 
 ### Listar Chamados
-<img align="center" src="Imagem/Listar_Chamados.PNG" alt="Imagem"/>
+<img align="center" src="Imagem/Listar_Chamado.PNG" alt="Imagem"/>
 
 ### Mais sobre o projeto  [Documentação](Documentação.md) página.
